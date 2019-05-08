@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	Javascript</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+		<h1>Shopping List</h1>
+		<p id="first">Get it done</p>
+		<p class="second">No excuses</p>
+		<input id="userinput" type="text" placeholder="enter items" onkeypress="addItem()">
+		<br>
+		<button  onclick="addItem()" id="enter">Click me</button>
+
+		<ul>
+			<li random="23">Notebook</li>
+			<li>Milk</li>
+			<li>Ballpen</li>
+			<li>Pencil</li>
+			<li>Candles</li>
+
+		</ul>
+
+<a href="">fgfdgdfgdfg</a>
+
+<script>
+// var button = document.getElementById("enter");
+var input = document.getElementById("userinput");
+var ul =  document.querySelector("ul");
+
+// button.addEventListener("click", function(){
+// 	if (input.value.length > 0) {
+// 	var li = document.createElement("li");
+// 	li.appendChild(document.createTextNode(input.value));
+// 	ul.appendChild(li);
+// 	input.value = "";
+		
+// 	}
+
+// });
+
+// //Input for enter
+// input.addEventListener('keypress', function(e){
+// 	if (input.value.length > 0 && e.keyCode==13){
+// 	var li = document.createElement("li");
+// 	li.appendChild(document.createTextNode(input.value));
+// 	ul.appendChild(li);
+// 	input.value = "";
+		
+// 	}	
+	
+// });
+function inputLength(){
+	return input.value.length;
+}
+
+function createListElement() {
+	var li = document.createElement("li");
+	li.appendChild(document.createTextNode(input.value));
+	ul.appendChild(li);
+	input.value = "";
+
+}
+
+function addItem(){
+
+	if (input.value.length > 0) {
+	var li = document.createElement("li");
+	li.appendChild(document.createTextNode(input.value));
+	ul.appendChild(li);
+	input.value = "";
+		
+	}
+
+};
+	
+function addItemPress(e){
+
+	if (input.value.length > 0 && e.keyCode==13){
+	var li = document.createElement("li");
+	li.appendChild(document.createTextNode(input.value));
+	ul.appendChild(li);
+	input.value = "";
+		
+	}	
+
+};
+
+function ultipress(e){
+	if (e.keyCode === 13)
+}
+
+
+</script>
+
+</body>
+</html>
